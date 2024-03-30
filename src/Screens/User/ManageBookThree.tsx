@@ -14,7 +14,7 @@ import {RNText} from '../../Theme/theme';
 import {colors} from '../../Theme/Colors';
 import ImagePath from '../../../assets/ImagePath';
 import NavigationService from '../../Navigation/NavigationService';
-import { NAVIGATION_MYACCOUNTS } from '../../Navigation/routes';
+import { NAVIGATION_MANAGE_REVIEWS, NAVIGATION_MYACCOUNTS } from '../../Navigation/routes';
 
 const ManageBookThree = () => {
   const renderItem = () => {
@@ -47,7 +47,7 @@ const ManageBookThree = () => {
           <View>
             <FlatList data={new Array(2)?.fill('')} renderItem={renderItem} />
 
-            <TouchableOpacity
+            <TouchableOpacity onPress={()=>NavigationService.navigate(NAVIGATION_MANAGE_REVIEWS)}
               activeOpacity={0.7}
               style={styles.button}>
               <RNText variant={'buttonText'}>Add Staff</RNText>

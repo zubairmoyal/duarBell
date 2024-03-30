@@ -21,6 +21,7 @@ const Button = ({
   useGradient,
   buttonStyle,
   showImage,
+  textStyle,
   ...rest
 }: BProps) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,7 +30,7 @@ const Button = ({
     if (isLoading) {
       setIsLoading(true);
       onPress();
-      if (!disabled) {
+      if (disabled) {
         setIsLoading(true);
         onPress();
       } else {
@@ -80,6 +81,7 @@ const Button = ({
             style={[
               useGradient ? styles.text : styles.text2,
               disabled && styles.disabledText,
+              textStyle
             ]}
             children={children}
             variant={'buttonText'}
@@ -116,6 +118,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 36,
     borderRadius: 18,
+    // marginBottom:32
   },
   text: {
     color: colors.white,

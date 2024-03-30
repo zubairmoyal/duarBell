@@ -1,9 +1,17 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import ImagePath from '../../../assets/ImagePath';
 import {colors} from '../../Theme/Colors';
 import NavigationService from '../../Navigation/NavigationService';
 import {RNText} from '../../Theme/theme';
+import { NAVIGATION_PROVIDER_PROFILE_DETAIL } from '../../Navigation/routes';
 
 const data = [
   {
@@ -64,37 +72,63 @@ const data = [
 ];
 
 const ProviderProfileItem = () => {
-
   const handleItemClick = (id: any) => {
     switch (id) {
       case '1':
-        NavigationService.navigate('');
+        NavigationService.navigate(NAVIGATION_PROVIDER_PROFILE_DETAIL);
         break;
       default:
         break;
     }
   };
-
-  return data?.map((item, index) => (
-    <TouchableOpacity
-      activeOpacity={0.5}
-      style={styles.main}
-      key={item.id}
-      onPress={() => handleItemClick(item.id)}>
-      <View
-        style={{
-          flexDirection: 'row',
-        }}>
-        <Image source={item.image} />
-        <RNText style={{marginLeft: 8}} variant={'commonText'}>
-          {item.title}
-        </RNText>
+  return (
+    <View style={{flex:1,marginBottom:12}}>
+      <FlatList
+        data={data}
+        keyExtractor={index => index?.toString()}
+        renderItem={({item}) => {
+          return (
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={styles.main}
+              key={item.id}
+              onPress={() => handleItemClick(item.id)}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                }}>
+                <Image source={item.image} />
+                <RNText style={{marginLeft: 8}} variant={'commonText'}>
+                  {item.title}
+                </RNText>
+              </View>
+              <Image source={item.arrow} />
+            </TouchableOpacity>
+          );
+        }}
+      />
       </View>
-      <Image source={item.arrow} />
-    </TouchableOpacity>
-  ));
+  );
+  //return data?.map((item, index) => (
+  //     <TouchableOpacity
+  //       activeOpacity={0.5}
+  //       style={styles.main}
+  //       key={item.id}
+  //       onPress={() => handleItemClick(item.id)}>
+  //       <View
+  //         style={{
+  //           flexDirection: 'row',
+  //         }}>
+  //         <Image source={item.image} />
+  //         <RNText style={{marginLeft: 8}} variant={'commonText'}>
+  //           {item.title}
+  //         </RNText>
+  //       </View>
+  //       <Image source={item.arrow} />
+  //     </TouchableOpacity>
+  //   ));
+  // };
 };
-
 export default ProviderProfileItem;
 
 const styles = StyleSheet.create({
@@ -107,6 +141,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 12,
     backgroundColor: colors.white,
     justifyContent: 'space-between',
-    elevation:2,
+    elevation: 2,
   },
 });

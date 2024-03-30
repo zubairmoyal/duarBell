@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {AppSafeAreaView, Input} from '../../Common';
 import CommonHeader from '../../Common/CommonHeader';
@@ -7,9 +7,23 @@ import LinearGradient from 'react-native-linear-gradient';
 import CommonHeaderOne from '../../Common/CommonHeaderOne';
 import {color} from '@shopify/restyle';
 import {colors} from '../../Theme/Colors';
+import { RNText } from '../../Theme/theme';
 
 const SearchScreen = () => {
-  const linearColor = ['#CE3700', '#C40069'];
+
+  const renderItem = () => {
+    return(
+      <View style={{
+        flex:1,
+        backgroundColor:colors.blue,
+        marginVertical:12,
+        padding:43
+      }}>
+        <RNText variant={'commonText'}>fljd;gjf;</RNText>
+        
+      </View>
+    )
+  }
 
   return (
     <AppSafeAreaView>
@@ -22,8 +36,16 @@ const SearchScreen = () => {
           placeholderTextColor={colors.gray}
         />
         <TouchableOpacity style={styles.image}>
-        <Image source={ImagePath.mic} />
+          <Image source={ImagePath.mic} />
         </TouchableOpacity>
+      </View>
+      <View style={{
+        // marginBottom:100
+      }}>
+        <FlatList 
+        data={new Array(10)?.fill('',)}
+        renderItem={renderItem}
+        />
       </View>
     </AppSafeAreaView>
   );
@@ -36,8 +58,9 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 57,
     backgroundColor: colors.white,
-    position: 'absolute',
-    bottom: 30,
+    position:'absolute',
+    top: 100,
+    // marginTop:62,
     borderRadius: 9,
     justifyContent: 'center',
     alignSelf: 'center',

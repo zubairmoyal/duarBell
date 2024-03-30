@@ -52,4 +52,9 @@ export default {
     profile:require('../assets/Image/profile.png'),
     idvarification: require('../assets/Image/outline.png'),
     setting: require('../assets/Image/setting.png'),
+    ei_check: require('../assets/Image/ei_check.png'),
+    symbols_star: require('../assets/Image/symbols_star.png'),
+    callIcon:require('../assets/Image/callIcon.png'),
+    setting_fill: require('../assets/Image/setting_fill.png'),
+    
 }

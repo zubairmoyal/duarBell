@@ -50,6 +50,8 @@ const theme = createTheme({
     vividpink :'#E8529E',
 
 
+
+
   },
   spacing: {
     s: 8,
@@ -168,11 +170,25 @@ const theme = createTheme({
       lineHeight: 15,
       color: 'orangePeel'
     },
+    sortByText1: {
+      fontFamily: fonts.medium,
+      fontWeight: '400',
+      fontSize: 11,
+      lineHeight: 16.65,
+      color: 'orangePeel'
+    },
     sortByText2: {
       fontFamily: fonts.medium,
       fontWeight: '300',
       fontSize: 8,
       lineHeight: 12,
+      color: 'darkMaroon'
+    },
+    sortByText3: {
+      fontFamily: fonts.medium,
+      fontWeight: '300',
+      fontSize: 11,
+      lineHeight: 16.5,
       color: 'darkMaroon'
     },
     callNow: {
@@ -224,6 +240,13 @@ const theme = createTheme({
       lineHeight: 15,
       color: 'charcoal'
     },
+    bellCoinHistorText4: {
+      fontFamily: fonts.semiBold,
+      fontWeight: '600',
+      fontSize: 12,
+      lineHeight: 18,
+      color: 'charcoal'
+    },
     notificationText: {
       fontFamily: fonts.medium,
       fontWeight: '400',
@@ -266,6 +289,13 @@ const theme = createTheme({
       lineHeight: 16.5,
       color:'darkOrange'
     },
+    myBookingAttach2:{
+      fontFamily: fonts.medium,
+      fontWeight: '400',
+      fontSize: 12,
+      lineHeight: 18,
+      color:'darkOrange'
+    },
     myAccount:{
       fontFamily: fonts.bold,
       fontWeight: '600',
@@ -292,6 +322,13 @@ const theme = createTheme({
       fontWeight: '300',
       fontSize: 12,
       lineHeight: 18,
+      color:'darkGray'
+    },
+    provideDetails1:{
+      fontFamily: fonts.semiBold,
+      fontWeight: '600',
+      fontSize: 10,
+      lineHeight: 15,
       color:'darkGray'
     },
     provideDetails2:{
@@ -322,6 +359,13 @@ const theme = createTheme({
       lineHeight: 18,
       color:'veryDimGray'
     },
+    provideDetailsProfil3:{
+      fontFamily: fonts.medium,
+      fontWeight: '300',
+      fontSize: 10,
+      lineHeight: 15,
+      color:'thinGray'
+    },
     providerVerify:{
       fontFamily: fonts.semiBold,
       fontWeight: '500',
@@ -346,6 +390,13 @@ const theme = createTheme({
     planText:{
       fontFamily: fonts.medium,
       fontWeight: '400',
+      fontSize: 10,
+      lineHeight: 18,
+      color:'dimGray'
+    },
+    planText2:{
+      fontFamily: fonts.semiBold,
+      fontWeight: '600',
       fontSize: 10,
       lineHeight: 18,
       color:'dimGray'
@@ -397,6 +448,13 @@ const theme = createTheme({
       fontWeight: '300',
       fontSize: 8,
       lineHeight: 12,
+      color: 'limeGreen'
+    },
+    managerBookingtextpending2:{
+      fontFamily: fonts.medium,
+      fontWeight: '400',
+      fontSize: 12,
+      lineHeight: 18,
       color: 'limeGreen'
     },
     toggleText: {

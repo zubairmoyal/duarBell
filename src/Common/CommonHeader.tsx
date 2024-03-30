@@ -14,7 +14,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import ToggleElement from 'react-native-toggle-element';
 import ToggleSwitch from './ToggleSwitch';
 import NavigationService from '../Navigation/NavigationService';
-import { NAVIGATION_CALL_LOG_SCREEN,  NAVIGATION_MESSAGE_SCREEN, NAVIGATION_NOTIFICATION_SCREEN, NAVIGATION_SEARCH_SCREEN } from '../Navigation/routes';
+import { NAVIGATION_CALL_LOG_SCREEN, NAVIGATION_MESSAGE_SCREEN, NAVIGATION_NOTIFICATION_SCREEN, NAVIGATION_SEARCH_SCREEN } from '../Navigation/routes';
 
 const CommonHeader = ({showLocation = true, screen, linearShow}:any) => {
   const isLocationVisible = screen === 'true';
@@ -31,6 +31,7 @@ const CommonHeader = ({showLocation = true, screen, linearShow}:any) => {
     NAVIGATION_NOTIFICATION_SCREEN,
     NAVIGATION_CALL_LOG_SCREEN,
     NAVIGATION_SEARCH_SCREEN,
+
   ];
   const handlePress = (index:any) => {
     const screenName = screenNames[index];
@@ -38,8 +39,7 @@ const CommonHeader = ({showLocation = true, screen, linearShow}:any) => {
   };
 
   return (
-    <>
-      <AppSafeAreaView style={{paddingHorizontal: 12, paddingBottom: 8}}>
+    <View style={{marginHorizontal:12}}>
         <View style={styles.main}>
           <Image source={ImagePath.DourBellHeader} />
           <Image source={ImagePath.DuarBellMenu} />
@@ -62,16 +62,15 @@ const CommonHeader = ({showLocation = true, screen, linearShow}:any) => {
           </View>
           <ToggleSwitch />
         </View>
-      </AppSafeAreaView>
-      <LinearGradient
+      {/* <LinearGradient
         style={{
           height: 78,
         }}
         start={{x: 0, y: 0.5}}
         end={{x: 1, y: 0.5}}
         colors={['#E851A1', '#FB7C0A']}
-      />
-    </>
+      /> */}
+    </View>
   );
 };
 
@@ -88,12 +87,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
+    marginBottom:8
   },
   locationMain2: {
     marginTop: 12,
     justifyContent: 'flex-end',
     alignItems: 'center',
     flexDirection: 'row',
+    marginBottom:8
   },
   location: {
     flexDirection: 'row',

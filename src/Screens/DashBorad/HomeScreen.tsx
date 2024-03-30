@@ -12,7 +12,7 @@ import CommonHeader from '../../Common/CommonHeader';
 import ImagePath from '../../../assets/ImagePath';
 import {SliderBox} from 'react-native-image-slider-box';
 import {colors} from '../../Theme/Colors';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {HOME_DATA} from '../../Common/DummyData';
 import HomeRenderItem from './HomeRenderItem';
 import {RNText} from '../../Theme/theme';
@@ -45,11 +45,10 @@ const HomeScreen = () => {
     );
   };
 
- 
-
   return (
-    <AppSafeAreaView style={{marginBottom:80}}>
-      <CommonHeader screen='true'/>
+    // <AppSafeAreaView>
+    <>
+      <CommonHeader screen="true" />
       <CommonScrollVIew>
         <SliderBox
           images={images}
@@ -72,50 +71,95 @@ const HomeScreen = () => {
           }}
           renderItem={renderCustomItem}
         />
-        <View style={{
-              marginTop:12,
-              marginHorizontal:10,
-              elevation:5,
-             }}> 
-         <FlatList
+        <View
+          style={{
+            marginTop: 12,
+            marginHorizontal: 10,
+          }}>
+          <FlatList
             data={HOME_DATA}
             renderItem={({item, index}) => {
               if (index % 3 === 0) {
                 const rowData = HOME_DATA.slice(index, index + 3);
                 return (
-                  <View style={{ }}>
-                <HomeRenderItem rowData={rowData} />
-                </View>
+                  <View style={{
+                    alignContent:'center',
+                  }}>
+                    <HomeRenderItem rowData={rowData} />
+                  </View>
                 );
               }
             }}
             keyExtractor={(item, index) => index.toString()}
-          /> 
+          />
         </View>
         <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginTop:12
-              }}>
-              <Image style={{width:"100%"}} source={ImagePath.adds} />
-              </View>
-              <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image style={{width:"100%"}} source={ImagePath.adds} />
-              </View>
-              <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image style={{width:"100%"}} source={ImagePath.adds} />
-              </View>
-              </CommonScrollVIew>
-    </AppSafeAreaView>
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 12,
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+         <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image style={{width: '100%'}} source={ImagePath.adds} />
+        </View>
+      </CommonScrollVIew>
+      </>
+    // </AppSafeAreaView>
   );
 };
 

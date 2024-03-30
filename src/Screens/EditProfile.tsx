@@ -79,7 +79,7 @@ const EditProfile = () => {
     });
   };
   return (
-    <AppSafeAreaView style={{marginBottom: 100}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <View style={styles.main}>
@@ -109,7 +109,6 @@ const EditProfile = () => {
             <Image source={ImagePath.Userprofile} />
             
           </View>
-          
 
           <RNText
             style={{
@@ -214,7 +213,7 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   input: {
-    height: 35,
+    // height: 35,
     color: colors.black,
     borderBottomWidth: 1,
     borderBottomColor: colors.gray2,

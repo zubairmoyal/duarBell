@@ -14,7 +14,6 @@ import Booking from '../Screens/Booking/Booking';
 import ImagePath from '../../assets/ImagePath';
 import Favorite from '../Screens/Favorite/Favorite';
 import Wallet from '../Screens/Wallet/Wallet';
-import User from '../Screens/User/User';
 import MessageScreen from '../Screens/HearderIconNavigation/MessageScreen';
 import NotificationsScreen from '../Screens/HearderIconNavigation/NotificationsScreen';
 import CallLogsScreen from '../Screens/HearderIconNavigation/CallLogsScreen';
@@ -27,6 +26,19 @@ import ManageBookThree from '../Screens/User/ManageBookThree';
 import MyAccounts from '../Screens/User/MyAccounts';
 import EditProfile from '../Screens/EditProfile';
 import ProviderProfile from '../Screens/ProviderProfile';
+import BellCoins from '../Screens/Wallet/BellCoins';
+import ProfileUser from '../Screens/User/ProfileUser';
+import Wallet2 from '../Screens/Wallet/Wallet2';
+import PlansScreen from '../Screens/Wallet/PlansScreen';
+import ActivePlanScreen from '../Screens/Wallet/ActivePlanScreen';
+import ManageReviews from '../Screens/User/ManageReviews';
+import ProviderDetail from '../Screens/Provider/MyAccount/ProviderDetail';
+import ManageBookingOne from '../Screens/Booking/ManageBookingOne';
+import AddStaff from '../Screens/Booking/AddStaff';
+import MyPortfolio from '../Screens/User/MyPortfolio';
+import ProviderProfileDetail from '../Screens/User/ProviderProfileDetail';
+import ProfileGranter from '../Screens/User/ProfileGranter';
+import ManageService from '../Screens/DashBorad/ManageService';
 
 
 const Navigator = () => {
@@ -89,6 +101,7 @@ const Navigator = () => {
     {name: routes.NAVIGATION_SERVICE_LIST_SCREEN, component: ServiceListScreen},
     {name: routes.NAVIGATION_LIST_SCREEN, component: ListScreen},
     {name: routes. NAVIGATION_CALLHISTORY, component:CallHistory},
+    {name: routes.NAVIGATION_MANAGE_SERVICE, component:ManageService},
 
 
   ];
@@ -110,6 +123,10 @@ const Navigator = () => {
 
   const screenConfigurationsForBooking = [
     {name: routes.NAVIGATION_BOOKING_SCREEN, component: Booking},
+    {name: routes.NAVIGATION_PROVIDER_DETAIL, component: ProviderDetail},
+    {name: routes.NAVIGATION_MANAGE_BOOKING_ONE, component: ManageBookingOne},
+    {name: routes.NAVIGATION_ADD_STAFF, component: AddStaff},
+
   ];
   const BookingStack = () => (
     <Stack.Navigator
@@ -145,6 +162,10 @@ const Navigator = () => {
 
   const screenConfigurationsForWallet =[
     {name: routes.NAVIGATION_WALEET_SCREEN, component: Wallet},
+    {name:routes.NAVIGATION_BELLCOINS,component:BellCoins},
+    {name: routes.NAVIGATION_WALEET2, component: Wallet2},
+    {name: routes.NAVIGATION_PLANS, component: PlansScreen},
+    {name: routes.NAVIGATION_ACTIVE_PLAN_SCREEN, component: ActivePlanScreen},
   ]
 
   const WalletStack =() => (
@@ -162,13 +183,16 @@ const Navigator = () => {
   )
 
   const screenConfigurationsForUser =[
-    {name:routes.NAVIGATION_USER_SCREEN,component:User},
+    {name:routes.NAVIGATION_USER_SCREEN,component:ProfileUser},
     {name: routes.NAVIGATION_VERIFICATION_ONE, component:VerificationOne},
     {name: routes.NAVIGATION_MANAGE_BOOK_THREE, component:ManageBookThree},
     {name:routes.NAVIGATION_MYACCOUNTS, component:MyAccounts},
     {name:routes.NAVIGATION_EDITPROFILE, component:EditProfile},
-    {name:routes.NAVIGATION_PROVIDERPROFILE, component:ProviderProfile}
-
+    {name:routes.NAVIGATION_PROVIDERPROFILE, component:ProviderProfile},
+    {name:routes.NAVIGATION_MANAGE_REVIEWS, component:ManageReviews},
+    {name: routes.NAVIGATION_MY_PORTFOLIO, component:MyPortfolio},
+    {name: routes.NAVIGATION_PROVIDER_PROFILE_DETAIL, component: ProviderProfileDetail},
+    {name: routes.NAVIGATION_PROFILE_GRANTER, component: ProfileGranter},
 
   ]
   const  UserStack=()=>(

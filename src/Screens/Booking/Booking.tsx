@@ -6,10 +6,12 @@ import CommonScrollVIew from '../../Common/CommonScrollVIew';
 import ImagePath from '../../../assets/ImagePath';
 import {RNText} from '../../Theme/theme';
 import {colors} from '../../Theme/Colors';
+import NavigationService from '../../Navigation/NavigationService';
+import {NAVIGATION_MANAGE_BOOKING_ONE, NAVIGATION_PROVIDER_DETAIL} from '../../Navigation/routes';
 
 const Booking = () => {
   return (
-    <AppSafeAreaView style={{marginBottom: 80}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <View style={styles.main}>
@@ -52,7 +54,9 @@ const Booking = () => {
                     Completed
                   </RNText>
                 </View>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity  onPress={() =>
+                NavigationService.navigate(NAVIGATION_MANAGE_BOOKING_ONE)
+              }  style={styles.button}>
                   <RNText variant={'myBookingButtonText'}>Message</RNText>
                 </TouchableOpacity>
               </View>
@@ -154,6 +158,9 @@ const Booking = () => {
             }}>
             <RNText variant={'inputText'}>At: 01-01-1970, 05:30 AM</RNText>
             <Button
+              onPress={() =>
+                NavigationService.navigate(NAVIGATION_PROVIDER_DETAIL)
+              }
               style={{
                 width: 107,
                 height: 27,

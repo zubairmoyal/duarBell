@@ -26,13 +26,13 @@ const AppSafeAreaView = ({
       </SafeAreaView>
     </View>
   ) : (
-    <View style={[{backgroundColor: statusColor, }, style]}>
+    <SafeAreaView style={[{backgroundColor: statusColor, flex:1,}, style]}>
       <StatusBar
         backgroundColor={statusColor ? statusColor : '#E9ECEF'}
         barStyle="dark-content"
       />
       {children}
-    </View>
+    </SafeAreaView>
   );
 };
 

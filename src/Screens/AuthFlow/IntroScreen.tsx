@@ -12,7 +12,7 @@ import ImagePath from '../../../assets/ImagePath';
 import {AppSafeAreaView, Button} from '../../Common';
 import {RNText} from '../../Theme/theme';
 import NavigationService from '../../Navigation/NavigationService';
-import {NAVIGATION_LOGIN} from '../../Navigation/routes';
+import { NAVIGATION_LOGIN } from '../../Navigation/routes';
 
 const {width} = Dimensions.get('window');
 

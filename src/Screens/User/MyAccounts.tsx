@@ -57,7 +57,7 @@ const MyAccounts = () => {
   };
 
   return (
-    <AppSafeAreaView style={{marginBottom: 100}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <View style={styles.main}>
@@ -123,7 +123,7 @@ const MyAccounts = () => {
           </View>
         </View>
           <View
-            style={{
+            style={{  
               flex:1,
             }}>
             {RenderItem()}

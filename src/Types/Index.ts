@@ -47,6 +47,7 @@ import {
     useGradient?:any;
     buttonStyle?:any;
     showImage?:boolean;
+    textStyle?:TextStyle;
   }
   
   export interface SpinnerProps {

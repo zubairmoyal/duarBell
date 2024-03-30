@@ -96,7 +96,7 @@ const ListScreen = () => {
     );
   };
   return (
-    <AppSafeAreaView style={{marginBottom:80}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <SortBy />

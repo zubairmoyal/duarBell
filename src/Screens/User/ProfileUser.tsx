@@ -12,15 +12,17 @@ import CommonScrollVIew from '../../Common/CommonScrollVIew';
 import {RNText} from '../../Theme/theme';
 import {colors} from '../../Theme/Colors';
 import NavigationService from '../../Navigation/NavigationService';
-import { NAVIGATION_VERIFICATION_ONE } from '../../Navigation/routes';
+import { NAVIGATION_MY_PORTFOLIO, NAVIGATION_PROFILE_GRANTER, NAVIGATION_VERIFICATION_ONE } from '../../Navigation/routes';
 
-const User = () => {
+const ProfileUser = () => {
   return (
     <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <View style={styles.main}>
+          <TouchableOpacity onPress={() => NavigationService.navigate(NAVIGATION_PROFILE_GRANTER)}>
           <RNText variant={'callHistoryText'}>Add Profile Granter</RNText>
+          </TouchableOpacity>
           <RNText variant={'commonText'}>
             Add your friend to your profile as a profile granter.
           </RNText>
@@ -61,6 +63,7 @@ const User = () => {
           />
 
           <TouchableOpacity
+          onPress={() => NavigationService.navigate(NAVIGATION_MY_PORTFOLIO)}
             style={{
               marginTop: 30,
               alignItems: 'center',
@@ -73,7 +76,7 @@ const User = () => {
   );
 };
 
-export default User;
+export default ProfileUser;
 
 const styles = StyleSheet.create({
   main: {

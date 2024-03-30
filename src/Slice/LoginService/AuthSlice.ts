@@ -9,18 +9,22 @@ export const initialState: AuthState = {
 };
 
 export const AuthsSlice = createSlice({
-    name: "Auth",
+    name: "auth",
     initialState,
     reducers: {
         setLoading: (state: AuthState, { payload }: PayloadAction<boolean>) => {
             state.isLoading = payload;
         },
+        setIsAuth: (state, action) => {
+            state.isAuth = action.payload;
+        }
     }
 })
 
 export const {
     setLoading,
-  } = AuthsSlice.actions;
+    setIsAuth,
+} = AuthsSlice.actions;
 
-  export const authSelector = (state: RootState) => state.auth;
+export const authSelector = (state: RootState) => state.auth;
 export default AuthsSlice.reducer;

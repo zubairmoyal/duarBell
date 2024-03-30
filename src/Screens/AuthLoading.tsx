@@ -3,7 +3,7 @@ import ImagePath from '../../assets/ImagePath';
 import {AppSafeAreaView} from '../Common';
 import {useEffect} from 'react';
 import NavigationService from '../Navigation/NavigationService';
-import {NAVIGATION_AUTH_FLOW} from '../Navigation/routes';
+import { NAVIGATION_AUTH_FLOW } from '../Navigation/routes';
 
 const AuthLoading = () => {
   useEffect(() => {

@@ -1,4 +1,4 @@
-import {FlatList, Image, ImageBackground, StyleSheet, Text, View,Platform} from 'react-native';
+import {FlatList, Image, ImageBackground, StyleSheet, Text, View,Platform, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {AppSafeAreaView, Button} from '../../Common';
 import CommonHeader from '../../Common/CommonHeader';
@@ -6,11 +6,14 @@ import CommonScrollVIew from '../../Common/CommonScrollVIew';
 import {colors} from '../../Theme/Colors';
 import {RNText} from '../../Theme/theme';
 import ImagePath from '../../../assets/ImagePath';
+import NavigationService from '../../Navigation/NavigationService';
+import { NAVIGATION_BELLCOINS, NAVIGATION_PROVIDERPROFILE, NAVIGATION_WALEET2 } from '../../Navigation/routes';
 
 const Wallet = () => {
   const renderItem = () => {
     return(
-      <View style={{
+      < TouchableOpacity onPress={() => NavigationService.navigate(NAVIGATION_WALEET2)}
+       style={{
        marginVertical:14,
        flexDirection:'row',
        backgroundColor:colors.white,
@@ -25,11 +28,11 @@ const Wallet = () => {
   <RNText variant={'bellCoinHistorText2'}>04 December 23, 04:11 AM</RNText>
 </View>
 <RNText variant={'walletRs'}>+30</RNText>
-      </View>
+      </TouchableOpacity>
     )
   }
   return (
-    <AppSafeAreaView style={{marginBottom:80}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         <View style={styles.main}>
@@ -44,7 +47,9 @@ const Wallet = () => {
             Referrer your friends earn 10 BellCoins each Your Referral Code is -
             <RNText variant={'buttonTextSemi'}>uRTPbb</RNText>
           </RNText>
-          <Button style={styles.button} children='SHARE' useGradient={true} />
+          <Button 
+          onPress={()=> NavigationService.navigate(NAVIGATION_BELLCOINS)}
+          style={styles.button} children='SHARE' useGradient={true} />
         </View>
        <View style={styles.flatlist}>
         <RNText style={{marginLeft:8}} variant={'callHistoryText'}>History</RNText>

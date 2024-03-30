@@ -12,19 +12,20 @@ const HomeRenderItem = ({rowData}: any) => {
   };
 
   return (
+    
     <View
       style={{
         backgroundColor: colors.white,
         flexDirection: 'row',
-        paddingVertical: 6,
-        paddingHorizontal: 16,
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
+        paddingVertical: 10,
+        justifyContent: 'space-between',
+        paddingHorizontal:25,
         width: '100%',
       }}>
       {rowData?.map((item, index) => {
         return (
           <TouchableOpacity
+          key={index}
             onPress={OnRenderClick}
             style={{
               alignItems: 'center',

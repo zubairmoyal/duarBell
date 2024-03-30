@@ -67,7 +67,7 @@ const CallHistory = () => {
   };
 
   return (
-    <AppSafeAreaView style={{marginBottom: 80}}>
+    <AppSafeAreaView>
       <CommonHeader />
       <CommonScrollVIew>
         {/* <SortBy /> */}
@@ -95,7 +95,7 @@ const CallHistory = () => {
               <Image
                 style={{height: 17, width: 17}}
                 source={ImagePath.dropdown}
-              />
+              />  
               </TouchableOpacity>
             </View>
             </View>

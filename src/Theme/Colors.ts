@@ -6,13 +6,14 @@ export const colors = {
   orange: '#CE3405',
   orange2: '#CE3404',
   orange3: '#CC2D11',
+  orange4:'#E71414',
   deepPink: '#C71C6C',
   midNightBLue: '#012970',
   orangePeel: '#FA7A0E',
   darkMaroon: '#1C000E',
   dimGray: '#525252',
   gray: '#777777',
-  charcoal: ' #212529',
+  charcoal: '#212529',
   green: '#058305',
   limeGreen:'#008000',
   darkOrange:'#CD3305',
@@ -30,5 +31,16 @@ export const colors = {
   dimWhite:'#EDEDED',
   lightGray:'#D9D9D9',
   blue:'#183DFF',
+  fadeGray:'#F0F0F0',
+  redpink:'#DC3545',
+  gray3:"#DEE2E6",
+
+  shadow: {
+    shadowColor: '#7499E1',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.4, // 4
+    shadowRadius: 8,
+    elevation: 5,
+  },
   };
   
